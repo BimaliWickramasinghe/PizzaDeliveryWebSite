@@ -38,6 +38,7 @@ img {
     
 .topnav a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
     
 .topnav a.activepge {
@@ -71,6 +72,7 @@ img {
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
 }
 
 .text {
@@ -97,6 +99,7 @@ img {
   
 .active, .dot:hover {
     background-color: #717171;
+    cursor: pointer;
 }
 
 .fade {
@@ -112,4 +115,19 @@ img {
   
 .column {
     flex: 50%;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }

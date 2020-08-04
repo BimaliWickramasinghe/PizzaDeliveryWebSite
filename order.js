@@ -53,10 +53,10 @@ function showPayInfo() {
 
   function check(){
       var i=0;
-      var op1 = new Array(1,2,3,4,5,6,7,8,9);
-      var op2 = new Array(1,2,3,4,5,6,7,8,9,10,11,12);
-      var op3 = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
-      var op4 = new Array(1,2,3,4,5,6,7,8,9,13,14,15);
+      var op1 = new Array(1,2,3,4,5,6,7,8,9); //pick up and pick up payment
+      var op2 = new Array(1,2,3,4,5,6,7,8,9,10,11,12); //deliver and pick up payment
+      var op3 = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15); //delivery and online payment
+      var op4 = new Array(1,2,3,4,5,6,7,8,9,13,14,15); //pick up and online payment
       var z = document.getElementById("payInfo");
       var y = document.getElementById("deliveryAddress");
       var x;
@@ -81,7 +81,7 @@ function showPayInfo() {
           }
       //pick up and online payment
       }else if(z.style.display === "block" && y.style.display === "none"){
-        for(i=0; i<15; i++){
+        for(i=0; i<12; i++){
             x=document.getElementById(op4[i]);
              if(x.value ==""){
                  confirm("Some fields are empty. Fill all the fields to proceed");

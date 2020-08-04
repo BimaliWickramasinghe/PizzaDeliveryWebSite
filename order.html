@@ -21,30 +21,30 @@
                 <section>
                     <h4>Pick Your Delivery?</h4>
                     <label>PickUp</label>
-                    <input type="radio" id="PickUp" name="order" value="PickUp" style="margin-left:300px"/><br/>
+                    <input onclick="hideDeliveryAddress()" type="radio" id="PickUp" name="order" value="PickUp" style="margin-left:300px"/><br/>
                     <label>Delivery</label>
-                    <input type="radio" id="Delivery" name="order" value="Delivery" style="margin-left:289px"/>
+                    <input onclick="showDeliveryAddress()" type="radio" id="Delivery" name="order" value="Delivery" style="margin-left:289px"/>
                     <h4> Your Pizza Order</h4>
-                    <textarea id="pizza" name="pizza" rows="2" cols="50">
+                    <textarea id="1" name="pizza" rows="2" cols="50">
                     </textarea>
                 </section>
-                <section id="deliveryAddress">
+                <section id="deliveryAddress" style="display:none;">
                     <h4>Delivery Address</h4>
                     <label for="baddress">Address</label><br/>
-                    <input type="text" id="baddress" name="baddress" value="" style="width: 400px;"><br>
+                    <input type="text" id="10" name="baddress" value="" style="width: 400px;"><br>
                     <label for="bsuburb">Suburb</label><br>
-                    <input type="text" id="bsuburb" name="bsuburb" value="" style="width: 400px;"><br>
+                    <input type="text" id="11" name="bsuburb" value="" style="width: 400px;"><br>
                     <label for="tel">Postalcode</label><br>
-                    <input type="number" id="bpcode" name="bpcode" value="" style="width: 400px;"><br><br>
+                    <input type="number" id="12" name="bpcode" value="" style="width: 400px;"><br><br>
                 </section>
                 <section id="paymentMethod">
                     <h4>Pay online or on pickup</h4>
                     <label>PickUp</label>
-                    <input type="radio" id="ppay" name="payment" value="ppay" style="margin-left:300px"/><br/>
+                    <input onclick="hidePayInfo()" type="radio" id="ppay" name="payment" value="ppay" style="margin-left:300px"/><br/>
                     <label>Online</label>
-                    <input type="radio" id="opay" name="payment" value="opay" style="margin-left:302px"/><br/><br/><br/><br/><br/>
+                    <input onclick="showPayInfo()" type="radio" id="opay" name="payment" value="opay" style="margin-left:302px"/><br/><br/><br/><br/><br/>
                 </section>
-                <input type="submit" value="Submit" style="margin-top: 100px">
+                <input onclick="check()" type="submit" value="Submit" style="margin-top: 100px">
             </div>
             </form>
             <form class="forms">
@@ -52,32 +52,32 @@
                 <section id="customerDetails">
                     <h4>Customer Details</h4>
                     <label for="name">Name</label><br/>
-                    <input type="text" id="name" name="name" value="" style="width: 400px;"><br/>
+                    <input type="text" id="2" name="name" value="" style="width: 400px;"><br/>
                     <label for="email">Email</label><br/>
-                    <input type="text" id="email" name="email" value="" style="width: 400px;"><br/>
+                    <input type="text" id="3" name="email" value="" style="width: 400px;"><br/>
                     <label for="tel">Contact Number</label><br/>
-                    <input type="number" id="tel" name="tel" value=""  style="width: 400px;"><br/><br/>
+                    <input type="number" id="4" name="tel" value=""  style="width: 400px;"><br/><br/>
                 </section>
                 <section id="billingAddress">
                     <h4>Billing Address</h4>
-                    <label>Sama as delivery address?</label><br/><br/>
+                    <label>Same as delivery address?</label><br/><br/>
                     <label>Yes</label>
-                    <input type="radio" id="PickUp" name="ad" value="yes" style="margin-left:300px"/><br/>
+                    <input onclick="copy()" type="radio" id="5" name="ad" value="yes" style="margin-left:300px"/><br/>
                     <label>No</label>
-                    <input type="radio" id="Delivery" name="ad" value="no" style="margin-left:305px"/><br/><br/>
+                    <input onclick="del()" type="radio" id="6" name="ad" value="no" style="margin-left:305px"/><br/><br/>
                     <label for="baddress">Address</label><br/>
-                    <input type="text" id="baddress" name="baddress" value="" style="width: 400px;"><br>
+                    <input type="text" id="7" name="baddress" value="" style="width: 400px;"><br>
                     <label for="bsuburb">Suburb</label><br>
-                    <input type="text" id="bsuburb" name="bsuburb" value="" style="width: 400px;"><br>
+                    <input type="text" id="8" name="bsuburb" value="" style="width: 400px;"><br>
                     <label for="tel">Postalcode</label><br>
-                    <input type="number" id="bpcode" name="bpcode" value="" style="width: 400px;"><br><br>
+                    <input type="number" id="9" name="bpcode" value="" style="width: 400px;"><br><br>
                 </section>
-                <section id="payInfo">
+                <section id="payInfo" style="display:none;">
                     <h4>Payment Information</h4>
                     <label for="pname">Full Name</label><br/>
-                    <input type="text" id="fname" name="fname" value="" style="width: 400px;"><br/>
+                    <input type="text" id="13" name="fname" value="" style="width: 400px;"><br/>
                     <label for="cCard">Credit Card</label><br/>
-                    <input type="number" id="cCard" name="cCard" value="" style="width: 400px;"><br/>
+                    <input type="number" id="14" name="cCard" value="" style="width: 400px;"><br/>
                     <label for="tel">Expiry</label><br/>
                     <select name="month" id="months" style="width: 400px;">
                         <option value="jan">January</option>
@@ -102,7 +102,7 @@
                         <option value="2025">2025</option>
                     </select><br/>
                     <label for="ccv">CCV</label><br/>
-                    <input type="number" id="ccv" name="ccv" value="" style="width: 400px;"><br/>
+                    <input type="number" id="15" name="ccv" value="" style="width: 400px;"><br/>
                 </section>
             </div>
             <br/>

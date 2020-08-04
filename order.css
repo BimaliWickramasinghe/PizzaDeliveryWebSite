@@ -13,8 +13,9 @@ body {
     overflow: hidden;
     position: fixed;
     top: 0;
-    margin-left: 350px;
-    width: 75%;
+    margin-left: 0px;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
     z-index: 99999;
 }
     
@@ -38,7 +39,8 @@ body {
 
 .row {
     display: flex;
-    background-color: grey;
+    background-color: white;
+    color: black;
 }
   
 .column {
@@ -52,4 +54,8 @@ body {
     background-color: gray;
     color: white;
     text-align: center;
+}
+
+.forms{
+    font-size: 12px;
 }

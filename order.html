@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="index.html" style="font-family: URW Chancery L, cursive; font-style: oblique;">Bruno's Pizzaria</a>
+        <a href="index.html" style="font-family: URW Chancery L, cursive; font-style: oblique; margin-left: 400px;">Bruno's Pizzaria</a>
         <section style="margin-left: 300px;">
         <a class="activepge" href="#">Order Now</a>
         <a href="#">Register</a>
@@ -16,13 +16,97 @@
     <br/>
     <h2 style="text-align:center; margin-top: 150px;;">Order Now</h2>
     <div class="row">
-        <div class="column" style="margin-left:200px;">
-            <p>ghghghghhgh</p>
-        </div>
-
-        <div class="column" style="margin-right:200px; text-align:right;">
-           
-        </div>
+        <form class="forms">
+            <div class="column" style="margin-left:200px;">
+                <section>
+                    <h4>Pick Your Delivery?</h4>
+                    <label>PickUp</label>
+                    <input type="radio" id="PickUp" name="order" value="PickUp" style="margin-left:300px"/><br/>
+                    <label>Delivery</label>
+                    <input type="radio" id="Delivery" name="order" value="Delivery" style="margin-left:289px"/>
+                    <h4> Your Pizza Order</h4>
+                    <textarea id="pizza" name="pizza" rows="2" cols="50">
+                    </textarea>
+                </section>
+                <section id="deliveryAddress">
+                    <h4>Delivery Address</h4>
+                    <label for="baddress">Address</label><br/>
+                    <input type="text" id="baddress" name="baddress" value="" style="width: 400px;"><br>
+                    <label for="bsuburb">Suburb</label><br>
+                    <input type="text" id="bsuburb" name="bsuburb" value="" style="width: 400px;"><br>
+                    <label for="tel">Postalcode</label><br>
+                    <input type="number" id="bpcode" name="bpcode" value="" style="width: 400px;"><br><br>
+                </section>
+                <section id="paymentMethod">
+                    <h4>Pay online or on pickup</h4>
+                    <label>PickUp</label>
+                    <input type="radio" id="ppay" name="payment" value="ppay" style="margin-left:300px"/><br/>
+                    <label>Online</label>
+                    <input type="radio" id="opay" name="payment" value="opay" style="margin-left:302px"/><br/><br/><br/><br/><br/>
+                </section>
+                <input type="submit" value="Submit" style="margin-top: 100px">
+            </div>
+            </form>
+            <form class="forms">
+            <div class="column" style="margin-left:100px; text-align:left;">
+                <section id="customerDetails">
+                    <h4>Customer Details</h4>
+                    <label for="name">Name</label><br/>
+                    <input type="text" id="name" name="name" value="" style="width: 400px;"><br/>
+                    <label for="email">Email</label><br/>
+                    <input type="text" id="email" name="email" value="" style="width: 400px;"><br/>
+                    <label for="tel">Contact Number</label><br/>
+                    <input type="number" id="tel" name="tel" value=""  style="width: 400px;"><br/><br/>
+                </section>
+                <section id="billingAddress">
+                    <h4>Billing Address</h4>
+                    <label>Sama as delivery address?</label><br/><br/>
+                    <label>Yes</label>
+                    <input type="radio" id="PickUp" name="ad" value="yes" style="margin-left:300px"/><br/>
+                    <label>No</label>
+                    <input type="radio" id="Delivery" name="ad" value="no" style="margin-left:305px"/><br/><br/>
+                    <label for="baddress">Address</label><br/>
+                    <input type="text" id="baddress" name="baddress" value="" style="width: 400px;"><br>
+                    <label for="bsuburb">Suburb</label><br>
+                    <input type="text" id="bsuburb" name="bsuburb" value="" style="width: 400px;"><br>
+                    <label for="tel">Postalcode</label><br>
+                    <input type="number" id="bpcode" name="bpcode" value="" style="width: 400px;"><br><br>
+                </section>
+                <section id="payInfo">
+                    <h4>Payment Information</h4>
+                    <label for="pname">Full Name</label><br/>
+                    <input type="text" id="fname" name="fname" value="" style="width: 400px;"><br/>
+                    <label for="cCard">Credit Card</label><br/>
+                    <input type="number" id="cCard" name="cCard" value="" style="width: 400px;"><br/>
+                    <label for="tel">Expiry</label><br/>
+                    <select name="month" id="months" style="width: 400px;">
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select><br/>
+                    <select name="year" id="years" style="width: 400px;">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    </select><br/>
+                    <label for="ccv">CCV</label><br/>
+                    <input type="number" id="ccv" name="ccv" value="" style="width: 400px;"><br/>
+                </section>
+            </div>
+            <br/>
+        </form>
     </div>
     <div class="footer">
         <p style="margin-top: 10px;">Contact Us:</p>

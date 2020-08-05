@@ -3,81 +3,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="order.css">
     <title>Pizzeria Order</title>
+    <!--SE/2017/046-->
 </head>
 <body>
     <div class="topnav">
-        <a href="index.html" style="font-family: URW Chancery L, cursive; font-style: oblique; margin-left: 400px;">Bruno's Pizzaria</a>
+        <a href="index.html" style="font-family: URW Chancery L, cursive; font-style: oblique; margin-left: 400px;">Bruno's Pizzeria</a>
         <section style="margin-left: 300px;">
         <a class="activepge" href="#">Order Now</a>
         <a href="#">Register</a>
         <a href="#">Features</a>
         </section>
     </div>
-    <br/>
-    <h2 style="text-align:center; margin-top: 150px;;">Order Now</h2>
+    <br/><br/>
+    <h2 style="text-align:center; margin-top: 150px;;">Order Now</h2><br/>
     <div class="row">
         <form class="forms">
+            <!--Left section of the form-->
             <div class="column" style="margin-left:200px;">
+                <!--Order your pizza-->
                 <section>
                     <h4>Pick Your Delivery?</h4>
                     <label>PickUp</label>
-                    <input onclick="hideDeliveryAddress()" type="radio" id="PickUp" name="order" value="PickUp" style="margin-left:300px"/><br/>
+                    <input onclick="hideDeliveryAddress()" type="radio" id="PickUp" name="order" value="PickUp" style="margin-left:300px"/><br/><br/>
                     <label>Delivery</label>
-                    <input onclick="showDeliveryAddress()" type="radio" id="Delivery" name="order" value="Delivery" style="margin-left:289px"/>
+                    <input onclick="showDeliveryAddress()" type="radio" id="Delivery" name="order" value="Delivery" style="margin-left:289px"/><br/>
                     <h4> Your Pizza Order</h4>
-                    <textarea id="1" name="pizza" rows="2" cols="50">
-                    </textarea>
+                    <textarea id="1" name="pizza" rows="2" cols="50" placeholder="1 Large Supreme" style="text-align:left;"></textarea><br>
                 </section>
+                <!--Delivery Information-->
                 <section id="deliveryAddress" style="display:none;">
                     <h4>Delivery Address</h4>
-                    <label for="baddress">Address</label><br/>
-                    <input type="text" id="10" name="baddress" value="" style="width: 400px;"><br>
+                    <label for="baddress">Address</label><br/><br/>
+                    <input type="text" id="10" name="baddress" value="" style="width: 400px;"><br/><br/>
                     <label for="bsuburb">Suburb</label><br>
-                    <input type="text" id="11" name="bsuburb" value="" style="width: 400px;"><br>
+                    <input type="text" id="11" name="bsuburb" value="" style="width: 400px;"><br/><br/>
                     <label for="tel">Postalcode</label><br>
-                    <input type="number" id="12" name="bpcode" value="" style="width: 400px;"><br><br>
+                    <input type="number" id="12" name="bpcode" value="" style="width: 400px;"><br/><br/><br/>
                 </section>
+                <!--Payment Method Information-->
                 <section id="paymentMethod">
                     <h4>Pay online or on pickup</h4>
                     <label>PickUp</label>
-                    <input onclick="hidePayInfo()" type="radio" id="ppay" name="payment" value="ppay" style="margin-left:300px"/><br/>
+                    <input onclick="hidePayInfo()" type="radio" id="ppay" name="payment" value="ppay" style="margin-left:300px"/><br/><br/>
                     <label>Online</label>
-                    <input onclick="showPayInfo()" type="radio" id="opay" name="payment" value="opay" style="margin-left:302px"/><br/><br/><br/><br/><br/>
+                    <input onclick="showPayInfo()" type="radio" id="opay" name="payment" value="opay" style="margin-left:302px"/><br/><br/><br/>
                 </section>
-                <input onclick="check()" type="submit" value="Submit" style="margin-top: 100px">
+                <!--Submit-->
+                <input onclick="check()" type="submit" value="Submit" style="margin-top: 200px;  background-color: darkred; color: white; font-size: 20px; width: 100px;">
             </div>
             </form>
             <form class="forms">
+            <!--Right section of the form-->
             <div class="column" style="margin-left:100px; text-align:left;">
+                <!--Customer Details-->
                 <section id="customerDetails">
                     <h4>Customer Details</h4>
                     <label for="name">Name</label><br/>
-                    <input type="text" id="2" name="name" value="" style="width: 400px;"><br/>
+                    <input type="text" id="2" name="name" value="" style="width: 400px;" placeholder="John Smith"><br/><br/>
                     <label for="email">Email</label><br/>
-                    <input type="text" id="3" name="email" value="" style="width: 400px;"><br/>
+                    <input type="email" id="3" name="email" value="" style="width: 400px;" placeholder="example@example.com"><br/><br/>
                     <label for="tel">Contact Number</label><br/>
-                    <input type="number" id="4" name="tel" value=""  style="width: 400px;"><br/><br/>
+                    <input type="number" id="4" name="tel" value=""  style="width: 400px;" placeholder="1234567890"><br/><br/><br/>
                 </section>
+                <!--Billing Information-->
                 <section id="billingAddress">
                     <h4>Billing Address</h4>
                     <label>Same as delivery address?</label><br/><br/>
                     <label>Yes</label>
-                    <input onclick="copy()" type="radio" id="5" name="ad" value="yes" style="margin-left:300px"/><br/>
+                    <input onclick="copy()" type="radio" id="5" name="ad" value="yes" style="margin-left:300px"/><br/><br/>
                     <label>No</label>
-                    <input onclick="del()" type="radio" id="6" name="ad" value="no" style="margin-left:305px"/><br/><br/>
+                    <input onclick="del()" type="radio" id="6" name="ad" value="no" style="margin-left:305px"/><br/><br/><br/>
                     <label for="baddress">Address</label><br/>
-                    <input type="text" id="7" name="baddress" value="" style="width: 400px;"><br>
+                    <input type="text" id="7" name="baddress" value="" style="width: 400px;"><br><br/>
                     <label for="bsuburb">Suburb</label><br>
-                    <input type="text" id="8" name="bsuburb" value="" style="width: 400px;"><br>
+                    <input type="text" id="8" name="bsuburb" value="" style="width: 400px;"><br><br/>
                     <label for="tel">Postalcode</label><br>
-                    <input type="number" id="9" name="bpcode" value="" style="width: 400px;"><br><br>
+                    <input type="number" id="9" name="bpcode" value="" style="width: 400px;"><br><br><br/>
                 </section>
+                <!--Payment Information-->
                 <section id="payInfo" style="display:none;">
                     <h4>Payment Information</h4>
-                    <label for="pname">Full Name</label><br/>
-                    <input type="text" id="13" name="fname" value="" style="width: 400px;"><br/>
+                    <label for="pname">Full Name</label><br/><br/>
+                    <input type="text" id="13" name="fname" value="" style="width: 400px;"><br/><br/>
                     <label for="cCard">Credit Card</label><br/>
-                    <input type="number" id="14" name="cCard" value="" style="width: 400px;"><br/>
+                    <input type="number" id="14" name="cCard" value="" style="width: 400px;"><br/><br/>
                     <label for="tel">Expiry</label><br/>
                     <select name="month" id="months" style="width: 400px;">
                         <option value="jan">January</option>
@@ -92,7 +101,7 @@
                         <option value="oct">October</option>
                         <option value="nov">November</option>
                         <option value="dec">December</option>
-                    </select><br/>
+                    </select><br/><br/><br/>
                     <select name="year" id="years" style="width: 400px;">
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
@@ -100,8 +109,8 @@
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
                         <option value="2025">2025</option>
-                    </select><br/>
-                    <label for="ccv">CCV</label><br/>
+                    </select><br/><br/>
+                    <label for="ccv">CCV</label><br/><br/>
                     <input type="number" id="15" name="ccv" value="" style="width: 400px;"><br/>
                 </section>
             </div>
@@ -109,7 +118,7 @@
         </form>
     </div>
     <div class="footer">
-        <p style="margin-top: 10px;">Contact Us:</p>
+        <p style="margin-top: 10px;"><br/>SE/2017/046<br/></p>
     </div>
     <script src="order.js">
     </script>
